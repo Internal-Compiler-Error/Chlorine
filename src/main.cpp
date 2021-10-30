@@ -1,9 +1,8 @@
-#include <iostream>
+#include "UI/main_window.h"
+#include <gtkmm.h>
 
-#include <QObject>
-int main()
-{
-    auto string = "Hello, World";
-    std::cout << string << std::endl;
-    return 0;
+int main(int argc, char *argv[]) {
+  auto app = Gtk::Application::create("org.gtkmm.examples.base");
+
+  return app->make_window_and_run<chlorine::ui::main_window>(argc, argv);
 }
