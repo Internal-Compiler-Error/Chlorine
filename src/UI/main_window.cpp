@@ -1,13 +1,12 @@
 //
-// Created by liangwang on 2021-10-29.
+// Created by liangwang on 2021-10-30.
 //
 
 #include "main_window.h"
+chlorine::ui::main_window::main_window() : Gtk::ApplicationWindow{} {
 
-using namespace chlorine;
+    set_default_size(800, 600);
 
-ui::main_window::main_window() {
-  set_title("Chlorine");
-  set_default_size(800, 600);
-
+    set_child(box_);
+    box_.append(button_);
 }

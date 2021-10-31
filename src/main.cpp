@@ -1,8 +1,8 @@
-#include "UI/main_window.h"
+#include "UI/main_application.h"
 #include <gtkmm.h>
 
 int main(int argc, char *argv[]) {
-  auto app = Gtk::Application::create("org.gtkmm.examples.base");
+    auto app = chlorine::ui::main_application::create();
 
-  return app->make_window_and_run<chlorine::ui::main_window>(argc, argv);
+    return app->run(argc, argv);
 }
